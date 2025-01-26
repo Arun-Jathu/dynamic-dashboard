@@ -1,0 +1,159 @@
+/* Wrapper for the entire TextBox component */
+.text-box-widget-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Container for the TextBox component */
+.text-box-container {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Dark Theme Compatibility */
+[data-theme="dark"] .text-box-container {
+  background-color: #2c2c2c !important;
+  color: #ccc !important;
+  border: 1px solid #444 !important;
+}
+
+/* Dark Theme Compatibility for input area */
+[data-theme="dark"] .text-box-input {
+  background-color: #444 !important;
+  color: #ccc !important;
+  border: 2px solid #666 !important;
+  transition: border-color 0.3s ease;
+}
+
+/* Dark Theme Compatibility for label */
+[data-theme="dark"] .text-box-label {
+  color: #aaa !important;
+}
+
+/* Dark Theme Compatibility for focus state of input */
+[data-theme="dark"] .text-box-input:focus {
+  border-color: #4a90e2 !important;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4) !important;
+}
+
+/* Dark Theme Compatibility for floating label when input is focused */
+[data-theme="dark"] .text-box-input:focus + .text-box-label,
+[data-theme="dark"] .text-box-input:not(:placeholder-shown) + .text-box-label {
+  color: #4a90e2 !important;
+}
+
+/* Footer with character counter */
+.text-box-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Dark Theme Compatibility for footer */
+[data-theme="dark"] .text-box-footer {
+  color: #ccc !important;
+}
+
+/* Dark Theme Compatibility for title bar */
+[data-theme="dark"] .text-box-container .text-box-label {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* Wrapper for the input area */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Textarea input field */
+.text-box-input {
+  width: 100%;
+  height: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Floating label styling */
+.text-box-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-size: 16px;
+  color: #aaa;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Focus state for the textarea */
+.text-box-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+/* When the textarea is focused or has text, the label floats above */
+.text-box-input:focus + .text-box-label,
+.text-box-input:not(:placeholder-shown) + .text-box-label {
+  top: -8px;
+  left: 16px;
+  font-size: 14px;
+  color: #4a90e2;
+}
+
+/* Footer with character counter */
+.text-box-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Dark Theme Compatibility for footer */
+[data-theme="dark"] .text-box-footer {
+  color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-box-container {
+    padding: 15px;
+  }
+
+  .text-box-label {
+    font-size: 14px;
+  }
+
+  .text-box-input {
+    font-size: 14px;
+  }
+
+  .text-box-footer {
+    font-size: 12px;
+  }
+}
